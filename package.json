@@ -1,17 +1,26 @@
 {
-    "name": "12-employee-tracker",
+    "name": "employee-tracker",
     "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
+    "description": "A program that allows you to update an employee database using mySQL and the command line.",
+    "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
+        "test": "jest"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jocelynvalladares/12-Employee-Tracker"
+        "url": "git+https://github.com/cml2377/Employee-Tracker.git"
     },
-    "author": "",
+    "keywords": [
+        "employee",
+        "tracker",
+        "coding",
+        "bootcamp",
+        "homework",
+        "mysql",
+        "inquirer",
+        "node"
+    ],
+    "author": "Crystal Ly",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/jocelynvalladares/12-Employee-Tracker/issues"
@@ -19,7 +28,8 @@
     "homepage": "https://github.com/jocelynvalladares/12-Employee-Tracker/blob/main/README.md",
     "dependencies": {
         "console.table": "^0.10.0",
-        "inquirer": "^7.3.3",
+        "dotenv": "^8.2.0",
+        "inquirer": "^7.0.4",
         "mysql": "^2.18.1"
     }
 }
