@@ -1,68 +1,46 @@
-/* ==================================================================================================================================
-    Hard coding information; the joins will add departmentId, roleId, and managerId. For now, I need to hard-code the data to test.
-================================================================================================================================== */
-USE employeeDatabase;
-
-INSERT INTO department
-    (id, deptName)
+-- department table
+INSERT INTO department(name)
 VALUES
-    (1, "Microbiology");
+("Writing"), 
+("Performance"), 
+("Executive"), 
+("Production");
 
-INSERT INTO department
-    (id, deptName)
+-- role table
+INSERT INTO role(title, salary, department_id)
 VALUES
-    (2, "Chemistry");
-INSERT INTO department
-    (id, deptName)
+-- writing
+("Head Writer", 500000.00, 1),
+("Writer", 200000.00, 1),
+("Assistant", 65000.00, 1),
+-- performance
+("Actor", 1000000.00, 2),
+-- executive
+("VP TV & Microwave Programming", 9000000.00, 3),
+("CEO", 9999999.99, 3),
+("VP News & Theme Park Talent", 3000000.00, 3),
+("Assistant", 100000.00, 3),
+("Page", 50000.00, 3),
+-- production
+("Producer", 500000.00, 4);
+
+-- employee table
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
 VALUES
-    (3, "Physics");
-
--- Adding role information. Last value relates to department table. --
-INSERT INTO role
-    (title, salary, departmentId)
-VALUES("Microbiologist", 33296.53, 1);
-
-INSERT INTO role
-    (title, salary, departmentId)
-VALUES("Chemist", 34596.02, 2);
-
-INSERT INTO role
-    (title, salary, departmentId)
-VALUES("Physicist", 36521.47, 3);
-
-
--- Adding employee info. Last 2 values relate to role table. All managers have to go first or else the lesser employees don't have a manager.--
-INSERT INTO employee
-    (firstName, lastName, roleId)
-VALUES("Anthony", "Garza", 1);
-
-INSERT INTO employee
-    (firstName, lastName, roleId)
-VALUES("Brianna", "McCray", 2);
-
-INSERT INTO employee
-    (firstName, lastName, roleId)
-VALUES("Kimi", "Inglet", 3);
-
-/*================================================================*/
-
-INSERT INTO employee
-    (firstName, lastName, roleId, managerId)
-VALUES("Crystal", "Ly", 1, 1);
-
-INSERT INTO employee
-    (firstName, lastName, roleId, managerId)
-VALUES("Kurt", "LaVacque", 2, 2);
-
-INSERT INTO employee
-    (firstName, lastName, roleId, managerId)
-VALUES("Justin", "Wofford", 3, 3);
-
-/*================================================================*/
-
-SELECT *
-FROM department;
-SELECT *
-FROM role;
-SELECT *
-FROM employee;
+-- writing
+("Liz", "Lemon", 1, 8),
+("Frank", "Rossitano", 2, 1),
+("Toofer", "Spurlock", 2, 1),
+("Johnny", "Lutz", 2, 1),
+("Cerie", "Xerox", 3, 1),
+-- performance
+("Jenna", "Maroney", 4, 13),
+("Tracey", "Jordan", 4, 13),
+-- executive
+("Jack", "Donaghy", 5, 9),
+("Don", "Geiss", 6, NULL),
+("Devon", "Banks", 7, 9),
+("Jonathan", "Pancholy", 8, 8),
+("Kenneth", "Parcell", 9, 8),
+-- production
+("Pete", "Hornberger", 10, 8);

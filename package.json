@@ -8,27 +8,18 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/cml2377/Employee-Tracker.git"
+        "url": "https://github.com/jocelynvalladares/12-Employee-Tracker/blob/main/README.md"
     },
-    "keywords": [
-        "employee",
-        "tracker",
-        "coding",
-        "bootcamp",
-        "homework",
-        "mysql",
-        "inquirer",
-        "node"
-    ],
-    "author": "Crystal Ly",
+    "author": "",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/jocelynvalladares/12-Employee-Tracker/issues"
     },
     "homepage": "https://github.com/jocelynvalladares/12-Employee-Tracker/blob/main/README.md",
     "dependencies": {
+        "chalk": "^4.1.0",
         "console.table": "^0.10.0",
-        "dotenv": "^8.2.0",
+        "figlet": "^1.5.0",
         "inquirer": "^7.0.4",
         "mysql": "^2.18.1"
     }
